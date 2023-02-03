@@ -97,6 +97,10 @@ section#contact-me {
     background-color: #E67F22;
 }
 
+section#contact-me p {
+    margin-bottom: 10px;
+}
+
 section h2 {
     margin-bottom: 20px;
     font-size: 36px;
