@@ -12,7 +12,9 @@ body {
 /* CSS styling for header and naviagtion menu */
 
 header {
+    display: inline-block;
     padding: 20px;
+    width: 100%;
     font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
     background-color: #1185EA;
     color: #ffffff;
@@ -20,7 +22,7 @@ header {
 }
 
 h1 {
-    display: inline-block;
+    display: inline-flex;
     font-size: 48px;
 }
 
@@ -44,6 +46,10 @@ li {
 a {
     color: #ffffff;
     text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff99;
 }
 
 p {
@@ -70,9 +76,10 @@ p {
 /* CSS styling for main articles */
 
 main {
-    width: 95%;
+    width: (100% - 40px);
     display: inline-block;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 section {
@@ -86,10 +93,6 @@ section#about-me {
     background-color: #18B1D1;
 }
 
-section#work {
-    background-color: #AB47BB;
-}
-
 section#contact-me {
     background-color: #E67F22;
 }
@@ -99,15 +102,21 @@ section h2 {
     font-size: 36px;
 }
 
-/* CSS styling for footer */
+/* CSS styling for work section */
 
-footer {
-    padding: 30px;
-    clear: both;
-    font-family: 'monaco', 'Consolas', 'Lucida Console', monospace;
-    text-align: center;
+section#work {
+    background-color: #AB47BB;
 }
 
-footer h2 {
-    font-size: 20px;
+#work img {
+    width: 100%;
 }
+
+/* CSS styling for reactive navigation bar */
+
+@media screen and (max-width: 800px) {
+    main,
+    header {
+      flex-direction: column;
+    }
+  }
